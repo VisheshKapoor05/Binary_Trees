@@ -10,7 +10,7 @@ public class Node implements Comparable<Node>{
 		this.left = null;
 		this.right = null;
 	}
-
+	
 	@Override
 	public int compareTo(Node node) {
 		return data-node.data;
