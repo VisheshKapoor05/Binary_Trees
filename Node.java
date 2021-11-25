@@ -1,4 +1,4 @@
-package HashMaps_Trees;
+package Binary_Trees;
 
 public class Node implements Comparable<Node>{
 	int data;
@@ -10,7 +10,7 @@ public class Node implements Comparable<Node>{
 		this.left = null;
 		this.right = null;
 	}
-
+	
 	@Override
 	public int compareTo(Node node) {
 		return data-node.data;
