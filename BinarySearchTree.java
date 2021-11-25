@@ -39,6 +39,34 @@ class BinarySearchTree {
 			System.out.println("No, all the elements are not added ");
 	}
 	
+	Node searchNode = null ;
+	// searching recursively for a node which is equal to the required data's node
+	public Node searchNode(Node sampleNode, int data) {
+		searchNode = sampleNode;
+		if(data == sampleNode.data)
+		{
+			//System.out.println("found: " +sampleNode.data);		
+			return searchNode;
+		}
+		
+		if(data<sampleNode.data)
+		{
+			sampleNode.left = searchNode(sampleNode.left,data);
+		}
+		else if(data>sampleNode.data)
+		{
+			sampleNode.right = searchNode(sampleNode.right, data);
+		}
+		return searchNode;
+	}
+	
+	
+	// returning node without input of the root node
+	public Node search(int data) {
+		Node searchedNode = searchNode(root, data);
+		return searchedNode;
+	}
+	
 	
 	// searching and printing values of the tree in inorder traversal
 	public void inorderTraversal(Node node) {
