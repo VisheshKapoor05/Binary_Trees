@@ -3,7 +3,9 @@ package Binary_Trees;
 public class BinaryTreeDemo {
 	
 	public static void main(String[] args) {
+		
 		BinarySearchTree newTree = new BinarySearchTree();
+		
 		Node root = newTree.insertElement(null, 56);
 		Node n2 = newTree.insertElement(root, 30);
 		Node n3 = newTree.insertElement(n2, 70);
@@ -21,5 +23,9 @@ public class BinaryTreeDemo {
 		newTree.printInorder();
 		System.out.println();
 		newTree.size();
+		
+		System.out.println();
+		Node node = newTree.search(63);
+		System.out.println("Found! value: " +node.data);
 	}
 }
