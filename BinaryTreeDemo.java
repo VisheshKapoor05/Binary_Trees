@@ -1,4 +1,4 @@
-package HashMaps_Trees;
+package Binary_Trees;
 
 public class BinaryTreeDemo {
 	
